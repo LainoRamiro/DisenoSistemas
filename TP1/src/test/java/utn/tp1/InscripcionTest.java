@@ -47,6 +47,6 @@ public class InscripcionTest {
     public void inscripcionDeAlumnoSinMateriasAUnaMateriaQueNOTieneCorrelativa(){
         Alumno ezequiel = new Alumno("ezequiel", 1470670);
         Inscripcion inscripcion3 = new Inscripcion(3, ezequiel, algoritmos);
-
+        Assert.assertTrue(inscripcion3.aprobada());
     }
 }
