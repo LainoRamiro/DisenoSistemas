@@ -1,0 +1,6 @@
+public Double calcularTiempoDemoraEstimado(Viaje viaje){
+        return viaje.viajes.stream().mapToDouble((viaje1) -> {
+            Double distancia = adapterDistanceMatrix.distancia(viaje1.direccionInicial, viaje1.direccionFinal);
+            return distancia / velocidadPromedio + viaje1.tiempoEspera;
+        }).sum();
+    }
